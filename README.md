@@ -128,3 +128,7 @@ If you faced issue when committing, check the issues reported. Each issue should
 - Don't manually edit files `src/res/images/index.ts` and `src/res/fonts/index.ts`. Instead, use scripts `yarn images` and `yarn fonts`.
 
 - This app uses `react-native-config` for handling global configurations (like server url, google api key, ..etc).
+
+## Contributors
+
+- [Ahmed Khattab](https://github.com/khattab93)
