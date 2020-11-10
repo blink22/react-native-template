@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* ReactNativeSkeletonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeSkeletonTests.m */; };
+		00E356F31AD99517003FC87E /* ReactNativeTemplateTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeTemplateTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -20,9 +20,9 @@
 		C59CE5BA3CEA4950BC0C4B44 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 21711E6785F74FD19414638A /* SFProDisplay-Bold.ttf */; };
 		CC1F42193CE547499262D7BC /* SFUIText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C5A40EA9C78C4E02A31D1AD1 /* SFUIText-Regular.ttf */; };
 		D08735B7FA3F4018BEEDD8FB /* Wulkan-Display-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 418C972531BE4DAC93618B80 /* Wulkan-Display-Black.otf */; };
-		E4491F29F16D8E1B32513C91 /* libPods-ReactNativeSkeletonTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE5A6A5E113EFE5CAE9A482 /* libPods-ReactNativeSkeletonTests.a */; };
+		E4491F29F16D8E1B32513C91 /* libPods-ReactNativeTemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE5A6A5E113EFE5CAE9A482 /* libPods-ReactNativeTemplateTests.a */; };
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
-		F345D463875667450FE9F4B0 /* libPods-ReactNativeSkeleton.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35CCED80F9C0844E8E6BD7 /* libPods-ReactNativeSkeleton.a */; };
+		F345D463875667450FE9F4B0 /* libPods-ReactNativeTemplate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FF35CCED80F9C0844E8E6BD7 /* libPods-ReactNativeTemplate.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,40 +31,40 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = ReactNativeSkeleton;
+			remoteInfo = ReactNativeTemplate;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* ReactNativeSkeletonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeSkeletonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ReactNativeTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* ReactNativeSkeletonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeSkeletonTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* ReactNativeSkeleton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeSkeleton.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNativeSkeleton/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactNativeSkeleton/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ReactNativeTemplateTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeTemplateTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ReactNativeTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactNativeTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ReactNativeTemplate/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = ReactNativeTemplate/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeSkeleton/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeSkeleton/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeSkeleton/main.m; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ReactNativeTemplate/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeTemplate/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ReactNativeTemplate/main.m; sourceTree = "<group>"; };
 		21711E6785F74FD19414638A /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProDisplay-Bold.ttf"; path = "../src/res/fonts/SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
 		223F24DD98444E5889D8A22E /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../src/res/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		2D16E6891FA4F8E400B85C8A /* libReact.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libReact.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		37347FDB4A624345B1B4F111 /* SFProText-Semibold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Semibold.ttf"; path = "../src/res/fonts/SFProText-Semibold.ttf"; sourceTree = "<group>"; };
-		3CC8526A246443830013F51B /* ReactNativeSkeleton.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ReactNativeSkeleton.entitlements; path = ReactNativeSkeleton/ReactNativeSkeleton.entitlements; sourceTree = "<group>"; };
+		3CC8526A246443830013F51B /* ReactNativeTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ReactNativeTemplate.entitlements; path = ReactNativeTemplate/ReactNativeTemplate.entitlements; sourceTree = "<group>"; };
 		418C972531BE4DAC93618B80 /* Wulkan-Display-Black.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Wulkan-Display-Black.otf"; path = "../src/res/fonts/Wulkan-Display-Black.otf"; sourceTree = "<group>"; };
 		A031E4D63329430E99732CD0 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../src/res/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		A04A0209CE8A4F7687E45245 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../src/res/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
-		A49A7419467F6B3BB5302852 /* Pods-ReactNativeSkeleton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkeleton.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeSkeleton/Pods-ReactNativeSkeleton.debug.xcconfig"; sourceTree = "<group>"; };
-		BDDF1567D00679F8B1D443FD /* Pods-ReactNativeSkeleton.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkeleton.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeSkeleton/Pods-ReactNativeSkeleton.release.xcconfig"; sourceTree = "<group>"; };
+		A49A7419467F6B3BB5302852 /* Pods-ReactNativeTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeTemplate.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeTemplate/Pods-ReactNativeTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		BDDF1567D00679F8B1D443FD /* Pods-ReactNativeTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeTemplate.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeTemplate/Pods-ReactNativeTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		C5A40EA9C78C4E02A31D1AD1 /* SFUIText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFUIText-Regular.ttf"; path = "../src/res/fonts/SFUIText-Regular.ttf"; sourceTree = "<group>"; };
-		D2D53BFF716EEBA1E91F2B3D /* Pods-ReactNativeSkeletonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkeletonTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeSkeletonTests/Pods-ReactNativeSkeletonTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2D53BFF716EEBA1E91F2B3D /* Pods-ReactNativeTemplateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeTemplateTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeTemplateTests/Pods-ReactNativeTemplateTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D904170D39214E08B1CAA534 /* SFProText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "SFProText-Regular.ttf"; path = "../src/res/fonts/SFProText-Regular.ttf"; sourceTree = "<group>"; };
-		EAE5A6A5E113EFE5CAE9A482 /* libPods-ReactNativeSkeletonTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeSkeletonTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAE5A6A5E113EFE5CAE9A482 /* libPods-ReactNativeTemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeTemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F9A1676694E38CE500834926 /* Pods-ReactNativeSkeletonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeSkeletonTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeSkeletonTests/Pods-ReactNativeSkeletonTests.release.xcconfig"; sourceTree = "<group>"; };
-		FF35CCED80F9C0844E8E6BD7 /* libPods-ReactNativeSkeleton.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeSkeleton.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A1676694E38CE500834926 /* Pods-ReactNativeTemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeTemplateTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeTemplateTests/Pods-ReactNativeTemplateTests.release.xcconfig"; sourceTree = "<group>"; };
+		FF35CCED80F9C0844E8E6BD7 /* libPods-ReactNativeTemplate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeTemplate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4491F29F16D8E1B32513C91 /* libPods-ReactNativeSkeletonTests.a in Frameworks */,
+				E4491F29F16D8E1B32513C91 /* libPods-ReactNativeTemplateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,20 +81,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */,
-				F345D463875667450FE9F4B0 /* libPods-ReactNativeSkeleton.a in Frameworks */,
+				F345D463875667450FE9F4B0 /* libPods-ReactNativeTemplate.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* ReactNativeSkeletonTests */ = {
+		00E356EF1AD99517003FC87E /* ReactNativeTemplateTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* ReactNativeSkeletonTests.m */,
+				00E356F21AD99517003FC87E /* ReactNativeTemplateTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = ReactNativeSkeletonTests;
+			path = ReactNativeTemplateTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -105,10 +105,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* ReactNativeSkeleton */ = {
+		13B07FAE1A68108700A75B9A /* ReactNativeTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				3CC8526A246443830013F51B /* ReactNativeSkeleton.entitlements */,
+				3CC8526A246443830013F51B /* ReactNativeTemplate.entitlements */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -117,7 +117,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = ReactNativeSkeleton;
+			name = ReactNativeTemplate;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -126,8 +126,8 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
-				FF35CCED80F9C0844E8E6BD7 /* libPods-ReactNativeSkeleton.a */,
-				EAE5A6A5E113EFE5CAE9A482 /* libPods-ReactNativeSkeletonTests.a */,
+				FF35CCED80F9C0844E8E6BD7 /* libPods-ReactNativeTemplate.a */,
+				EAE5A6A5E113EFE5CAE9A482 /* libPods-ReactNativeTemplateTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -149,9 +149,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* ReactNativeSkeleton */,
+				13B07FAE1A68108700A75B9A /* ReactNativeTemplate */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* ReactNativeSkeletonTests */,
+				00E356EF1AD99517003FC87E /* ReactNativeTemplateTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				F8D793243E92D15E753B6E34 /* Pods */,
@@ -166,8 +166,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* ReactNativeSkeleton.app */,
-				00E356EE1AD99517003FC87E /* ReactNativeSkeletonTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ReactNativeTemplate.app */,
+				00E356EE1AD99517003FC87E /* ReactNativeTemplateTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,10 +190,10 @@
 		F8D793243E92D15E753B6E34 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A49A7419467F6B3BB5302852 /* Pods-ReactNativeSkeleton.debug.xcconfig */,
-				BDDF1567D00679F8B1D443FD /* Pods-ReactNativeSkeleton.release.xcconfig */,
-				D2D53BFF716EEBA1E91F2B3D /* Pods-ReactNativeSkeletonTests.debug.xcconfig */,
-				F9A1676694E38CE500834926 /* Pods-ReactNativeSkeletonTests.release.xcconfig */,
+				A49A7419467F6B3BB5302852 /* Pods-ReactNativeTemplate.debug.xcconfig */,
+				BDDF1567D00679F8B1D443FD /* Pods-ReactNativeTemplate.release.xcconfig */,
+				D2D53BFF716EEBA1E91F2B3D /* Pods-ReactNativeTemplateTests.debug.xcconfig */,
+				F9A1676694E38CE500834926 /* Pods-ReactNativeTemplateTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -201,9 +201,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* ReactNativeSkeletonTests */ = {
+		00E356ED1AD99517003FC87E /* ReactNativeTemplateTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeSkeletonTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeTemplateTests" */;
 			buildPhases = (
 				CAB1C24E03DBC33DFF81449D /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -215,28 +215,29 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = ReactNativeSkeletonTests;
-			productName = ReactNativeSkeletonTests;
-			productReference = 00E356EE1AD99517003FC87E /* ReactNativeSkeletonTests.xctest */;
+			name = ReactNativeTemplateTests;
+			productName = ReactNativeTemplateTests;
+			productReference = 00E356EE1AD99517003FC87E /* ReactNativeTemplateTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* ReactNativeSkeleton */ = {
+		13B07F861A680F5B00A75B9A /* ReactNativeTemplate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeSkeleton" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeTemplate" */;
 			buildPhases = (
 				B8482A9318425F63E8786DAD /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				1110CF132A86E68270C36886 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ReactNativeSkeleton;
+			name = ReactNativeTemplate;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* ReactNativeSkeleton.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* ReactNativeTemplate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -259,7 +260,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNativeSkeleton" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNativeTemplate" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,8 +274,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* ReactNativeSkeleton */,
-				00E356ED1AD99517003FC87E /* ReactNativeSkeletonTests */,
+				13B07F861A680F5B00A75B9A /* ReactNativeTemplate */,
+				00E356ED1AD99517003FC87E /* ReactNativeTemplateTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +322,24 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
+		1110CF132A86E68270C36886 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReactNativeTemplate/Pods-ReactNativeTemplate-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/AccessibilityResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AccessibilityResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReactNativeTemplate/Pods-ReactNativeTemplate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8482A9318425F63E8786DAD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -336,7 +355,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReactNativeSkeleton-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeTemplate-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -358,7 +377,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ReactNativeSkeletonTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ReactNativeTemplateTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -372,7 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* ReactNativeSkeletonTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ReactNativeTemplateTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +409,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* ReactNativeSkeleton */;
+			target = 13B07F861A680F5B00A75B9A /* ReactNativeTemplate */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -402,7 +421,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = ReactNativeSkeleton;
+			path = ReactNativeTemplate;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -410,7 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2D53BFF716EEBA1E91F2B3D /* Pods-ReactNativeSkeletonTests.debug.xcconfig */;
+			baseConfigurationReference = D2D53BFF716EEBA1E91F2B3D /* Pods-ReactNativeTemplateTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -422,7 +441,7 @@
 					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ReactNativeSkeletonTests/Info.plist;
+				INFOPLIST_FILE = ReactNativeTemplateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -435,13 +454,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeSkeleton.app/ReactNativeSkeleton";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeTemplate.app/ReactNativeTemplate";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9A1676694E38CE500834926 /* Pods-ReactNativeSkeletonTests.release.xcconfig */;
+			baseConfigurationReference = F9A1676694E38CE500834926 /* Pods-ReactNativeTemplateTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -450,7 +469,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEVELOPMENT_TEAM = "";
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ReactNativeSkeletonTests/Info.plist;
+				INFOPLIST_FILE = ReactNativeTemplateTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
@@ -463,23 +482,23 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeSkeleton.app/ReactNativeSkeleton";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReactNativeTemplate.app/ReactNativeTemplate";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A49A7419467F6B3BB5302852 /* Pods-ReactNativeSkeleton.debug.xcconfig */;
+			baseConfigurationReference = A49A7419467F6B3BB5302852 /* Pods-ReactNativeTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ReactNativeSkeleton/ReactNativeSkeleton.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ReactNativeTemplate/ReactNativeTemplate.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 8DM63GTHMM;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ReactNativeSkeleton/Info.plist;
+				INFOPLIST_FILE = ReactNativeTemplate/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
 				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -490,24 +509,24 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.blink22.reactnativeskeleton;
-				PRODUCT_NAME = ReactNativeSkeleton;
-				PROVISIONING_PROFILE_SPECIFIER = "ReactNativeSkeleton adhoc";
+				PRODUCT_NAME = ReactNativeTemplate;
+				PROVISIONING_PROFILE_SPECIFIER = "ReactNativeTemplate adhoc";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDDF1567D00679F8B1D443FD /* Pods-ReactNativeSkeleton.release.xcconfig */;
+			baseConfigurationReference = BDDF1567D00679F8B1D443FD /* Pods-ReactNativeTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = ReactNativeSkeleton/ReactNativeSkeleton.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ReactNativeTemplate/ReactNativeTemplate.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 8DM63GTHMM;
 				HEADER_SEARCH_PATHS = "$(inherited)";
-				INFOPLIST_FILE = ReactNativeSkeleton/Info.plist;
+				INFOPLIST_FILE = ReactNativeTemplate/Info.plist;
 				INFOPLIST_OTHER_PREPROCESSOR_FLAGS = "-traditional";
 				INFOPLIST_PREPROCESS = NO;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -518,8 +537,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.blink22.reactnativeskeleton;
-				PRODUCT_NAME = ReactNativeSkeleton;
-				PROVISIONING_PROFILE_SPECIFIER = "ReactNativeSkeleton adhoc";
+				PRODUCT_NAME = ReactNativeTemplate;
+				PROVISIONING_PROFILE_SPECIFIER = "ReactNativeTemplate adhoc";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -626,7 +645,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeSkeletonTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ReactNativeTemplateTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -635,7 +654,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeSkeleton" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ReactNativeTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -644,7 +663,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNativeSkeleton" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ReactNativeTemplate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
