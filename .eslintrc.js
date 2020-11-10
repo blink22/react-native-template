@@ -1,5 +1,6 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
+  plugins: ["react-hooks"],
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
@@ -27,6 +28,8 @@ module.exports = {
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/interface-name-prefix": [2, { prefixWithI: "always" }],
     "@typescript-eslint/explicit-member-accessibility": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
   },
   settings: {
     react: {
