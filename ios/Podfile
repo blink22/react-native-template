@@ -35,12 +35,12 @@ def rn_libs
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 end
 
-target 'ReactNativeSkeleton' do
-  # Pods for ReactNativeSkeleton
+target 'Covis' do
+  # Pods for Covis
   rn_libs
 
 
-  target 'ReactNativeSkeletonTests' do
+  target 'CovisTests' do
     inherit! :search_paths
     # Pods for testing
   end

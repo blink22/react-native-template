@@ -188,11 +188,6 @@ PODS:
     - React
   - react-native-safe-area-context (0.7.3):
     - React
-  - react-native-video (5.0.0):
-    - React
-    - react-native-video/Video (= 5.0.0)
-  - react-native-video/Video (5.0.0):
-    - React
   - React-RCTActionSheet (0.61.5):
     - React-Core/RCTActionSheetHeaders (= 0.61.5)
   - React-RCTAnimation (0.61.5):
@@ -232,8 +227,6 @@ PODS:
     - React
   - RNGestureHandler (1.5.2):
     - React
-  - RNScreens (2.0.0-beta.7):
-    - React
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -256,7 +249,6 @@ DEPENDENCIES:
   - "react-native-async-storage (from `../node_modules/@react-native-community/async-storage`)"
   - react-native-config (from `../node_modules/react-native-config`)
   - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
-  - react-native-video (from `../node_modules/react-native-video`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../node_modules/react-native/Libraries/Blob`)
@@ -270,7 +262,6 @@ DEPENDENCIES:
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
-  - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -312,8 +303,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-config"
   react-native-safe-area-context:
     :path: "../node_modules/react-native-safe-area-context"
-  react-native-video:
-    :path: "../node_modules/react-native-video"
   React-RCTActionSheet:
     :path: "../node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -338,8 +327,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/@react-native-community/masked-view"
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
-  RNScreens:
-    :path: "../node_modules/react-native-screens"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -362,7 +349,6 @@ SPEC CHECKSUMS:
   react-native-async-storage: fa98f9a2857afb12128c50c59e506f1925d7bd5b
   react-native-config: 7db9b96479164dfd7b2be68eb9079e08279511c4
   react-native-safe-area-context: e200d4433aba6b7e60b52da5f37af11f7a0b0392
-  react-native-video: 6555881252c8ca039760e1cd6df28ac28ffb2baf
   React-RCTActionSheet: 600b4d10e3aea0913b5a92256d2719c0cdd26d76
   React-RCTAnimation: 791a87558389c80908ed06cc5dfc5e7920dfa360
   React-RCTBlob: d89293cc0236d9cb0933d85e430b0bbe81ad1d72
@@ -375,9 +361,8 @@ SPEC CHECKSUMS:
   ReactCommon: 198c7c8d3591f975e5431bec1b0b3b581aa1c5dd
   RNCMaskedView: a88953beefbd347a29072d9eba90e42945fe291e
   RNGestureHandler: 946a7691e41df61e2c4b1884deab41a4cdc3afff
-  RNScreens: b9ea46d65967a1f74b9aaa1229d0f74f58d216b5
   Yoga: f2a7cd4280bfe2cca5a7aed98ba0eb3d1310f18b
 
-PODFILE CHECKSUM: a4130f644a1df8c2c6f80460df72034d96f4eb4a
+PODFILE CHECKSUM: 72081f2e0920d11a9f758fcafbf8feac06740f2f
 
 COCOAPODS: 1.8.3
