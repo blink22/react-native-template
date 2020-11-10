@@ -1,4 +1,4 @@
-package com.sidebench.covis;
+package com.blink22.reactnativetemplate;
 
 import android.app.Application;
 import android.content.Context;

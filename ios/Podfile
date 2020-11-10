@@ -8,15 +8,15 @@ def rn_libs
   # Packages pods
 end
 
-target 'Covis' do
+target 'ReactNativeTemplate' do
   # React native pods
   config = use_native_modules!
   use_react_native!(:path => config["reactNativePath"])
 
-  # Pods for Covis
+  # Pods for ReactNativeTemplate
   rn_libs
 
-  target 'CovisTests' do
+  target 'ReactNativeTemplateTests' do
     inherit! :search_paths
     # Pods for testing
   end

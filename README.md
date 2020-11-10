@@ -1,4 +1,4 @@
-# react-native-skeleton
+# react-native-template
 
 ## Set up
 
