@@ -1,0 +1,37 @@
+default_platform :android
+
+platform :android do
+  desc 'Increment the version code, create a bump version commit and push it remotelly'
+  lane :bump_build do
+    ensure_git_status_clean
+
+    build_number = android_set_version_code
+    version = android_set_version_name bump_type: "patch"
+
+    git_commit(
+      path: ['./app/build.gradle'],
+      message: "build: bump Android beta version to #{version} build #{build_number}\n[skip ci]"
+    )
+
+    add_git_tag(
+      tag: "beta/android/v#{version}-#{build_number}"
+    )
+
+    push_to_git_remote
+  end
+
+  def build 
+    gradle(task: 'clean')
+    gradle(task: 'assemble', build_type: 'Release')
+  end
+
+  lane :beta do
+    build
+    firebase_app_distribution(
+      app: ENV['ANDROID_FIREBASE_APP_ID'],
+      firebase_cli_token: ENV['FIREBASE_TOKEN'],
+      apk_path: 'app/build/outputs/apk/release/app-release.apk',
+      groups: 'team'
+    )
+  end
+end

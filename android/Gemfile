@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+
+gem "fastlane", "=2.120.0" # change the versoin to your favourite version or remove it for latest versoin
+plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
+eval_gemfile(plugins_path) if File.exist?(plugins_path)

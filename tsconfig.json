@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "lib": ["es2018"],
+    "target": "es2018",
+    "moduleResolution": "node",
+    "module": "ESNext",
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "jsx": "react-native",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@skeleton/*": ["./src/*"],
+      "@skeleton-ui/*": ["./src/views/shared/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["src", "__test__"]
+}

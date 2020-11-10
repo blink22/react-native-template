@@ -1,0 +1,107 @@
+{
+  "name": "react-native-skeleton",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "run-android": "react-native run-android",
+    "run-ios": "react-native run-ios",
+    "test": "jest",
+    "images": "node scripts/images.ts",
+    "fonts": "node scripts/fonts.ts",
+    "link-pkgs": "react-native link",
+    "rename": "react-native-rename",
+    "format": "npm-run-all format:*",
+    "format:js": "prettier --write {.,**}/*.js",
+    "format:json": "prettier --write {.,**}/*.json",
+    "format:md": "prettier --write {.,**}/*.md",
+    "format:ts": "prettier --write {.,**}/*.{ts,tsx}",
+    "check-format": "npx prettier -c \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "lint": "npx eslint \"src/**/*.{ts,tsx,js,jsx}\"",
+    "android-gems": "cd android && bundle install && cd ..",
+    "ios-gems": "cd ios && bundle install && cd ..",
+    "pods": "cd ios && bundle exec pod install",
+    "android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "ios-bundle": "react-native bundle --platform ios --dev false --entry-file index.js --bundle-output ios/main.jsbundle --assets-dest ios",
+    "android-beta": "cd android && fastlane beta && cd ..",
+    "ios-beta": "cd ios && fastlane beta && cd .."
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "1.2.4",
+    "@react-native-community/masked-view": "0.1.6",
+    "@react-navigation/native": "5.0.5",
+    "@react-navigation/stack": "5.0.5",
+    "@reduxjs/toolkit": "1.2.3",
+    "apisauce": "1.1.1",
+    "axios": "0.19.2",
+    "flux-standard-action": "2.1.1",
+    "lodash": "4.17.15",
+    "moment": "2.24.0",
+    "react": "16.9.0",
+    "react-native": "0.61.5",
+    "react-native-config": "1.0.0",
+    "react-native-gesture-handler": "1.5.2",
+    "react-native-rename": "2.4.1",
+    "react-native-responsive-screen": "1.4.1",
+    "react-native-safe-area-context": "0.7.3",
+    "react-redux": "6.0.1",
+    "redux": "4.0.1",
+    "redux-logger": "3.0.6",
+    "redux-persist": "6.0.0",
+    "redux-saga": "1.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "7.6.2",
+    "@babel/runtime": "7.6.2",
+    "@react-native-community/eslint-config": "0.0.7",
+    "@types/lodash": "4.14.149",
+    "@types/react": "16.8.10",
+    "@types/react-native": "0.57.42",
+    "@types/react-redux": "7.0.6",
+    "@types/redux-logger": "3.0.7",
+    "@types/redux-persist": "4.3.1",
+    "@typescript-eslint/eslint-plugin": "2.19.2",
+    "@typescript-eslint/parser": "2.19.2",
+    "babel-jest": "24.9.0",
+    "eslint": "6.5.1",
+    "eslint-config-prettier": "4.1.0",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-react": "7.12.4",
+    "husky": "4.2.3",
+    "jest": "24.8.0",
+    "lint-staged": "10.0.7",
+    "metro-react-native-babel-preset": "0.56.0",
+    "npm-run-all": "4.1.5",
+    "prettier": "1.16.4",
+    "react-native-typescript-transformer": "1.2.12",
+    "react-test-renderer": "16.9.0",
+    "reactotron-react-native": "3.2.1",
+    "reactotron-redux": "3.1.0",
+    "reactotron-redux-saga": "4.2.1",
+    "typescript": "3.4.1"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "prettier --write",
+      "npx eslint --fix"
+    ],
+    "*.md": [
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
+  }
+}

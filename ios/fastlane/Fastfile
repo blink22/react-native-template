@@ -1,0 +1,38 @@
+default_platform :ios
+
+platform :ios do
+  before_all do
+    setup_circle_ci
+  end
+
+  desc 'Increment the build number, create a bump version commit and push it remotelly'
+  lane :bump_build do
+    ensure_git_status_clean
+
+    build_number = increment_build_number
+    version = increment_version_number bump_type: "patch"
+
+    commit_version_bump(
+      message: "build: bump iOS beta version to #{version} build #{build_number}\n[skip ci]",
+      xcodeproj: 'Curate.xcodeproj'
+    )
+
+    add_git_tag(
+      tag: "beta/ios/v#{version}-#{build_number}"
+    )
+
+    push_to_git_remote
+  end
+
+  lane :beta do
+    match type: "adhoc"
+    ipa_file = gym export_method: "ad-hoc"
+    firebase_app_distribution(
+      app: ENV['IOS_FIREBASE_APP_ID'],
+      firebase_cli_token: ENV['FIREBASE_TOKEN'],
+      ipa_path: ipa_file,
+      release_notes_file: '../release-notes',
+      groups: 'team'
+    )
+  end
+end

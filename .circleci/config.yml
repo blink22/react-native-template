@@ -1,0 +1,302 @@
+version: 2.1
+orbs:
+  app:
+    executors:
+      linux_js:
+        docker:
+          - image: circleci/node:12.16
+      macos:
+        macos:
+          xcode: 11.1.0
+      linux_android:
+        docker:
+          - image: circleci/android:api-28-node
+
+    commands:
+      yarn_install:
+        steps:
+          - restore_cache:
+              keys:
+                - yarn-v2-{{ arch }}-{{ checksum "yarn.lock" }}
+                - yarn-v2-{{ arch }}-
+
+          - restore_cache:
+              keys:
+                - node-v2-{{ arch }}-{{ checksum "package.json" }}
+                - node-v2-{{ arch }}-
+
+          - run:
+              name: Yarn Install
+              command: yarn install --frozen-lockfile --non-interactive --cache-folder ~/.cache/yarn
+
+          - save_cache:
+              key: yarn-v2-{{ arch }}-{{ checksum "yarn.lock" }}
+              paths:
+                - ~/.cache/yarn
+
+          - save_cache:
+              key: node-v2-{{ arch }}-{{ checksum "package.json" }}
+              paths:
+                - node_modules
+          - run:
+              name: jetify
+              command: npx jetify
+
+      code_analysis:
+        description: "Code Analysis"
+        steps:
+          - run:
+              name: Check Format Style
+              command: yarn check-format
+          - run:
+              name: Check Linting Style
+              command: yarn lint
+
+      setup_ruby_version:
+        parameters:
+          version:
+            default: "2.5"
+            type: string
+        steps:
+          - run:
+              name: Setup Ruby Version
+              command: echo "ruby-<<parameters.version>>" > ~/.ruby-version
+
+      bundle_install:
+        parameters:
+          working_directory:
+            type: string
+          bundle_path:
+            default: vendor/bundle
+            type: string
+        steps:
+          - restore_cache:
+              key: bundle-v1-{{ arch }}-{{ checksum "<<parameters.working_directory>>/Gemfile.lock" }}
+          - run:
+              name: Install Bundler
+              command: bundle install --path <<parameters.bundle_path>>
+              working_directory: <<parameters.working_directory>>
+          - save_cache:
+              key: bundle-v1-{{ arch }}-{{ checksum "<<parameters.working_directory>>/Gemfile.lock" }}
+              paths:
+                - <<parameters.working_directory>>/<<parameters.bundle_path>>
+
+      pods_install:
+        parameters:
+          working_directory:
+            default: ios
+            type: string
+        steps:
+          - restore_cache:
+              keys:
+                - pods-v1-{{ checksum "<<parameters.working_directory>>/Podfile.lock" }}
+                - pods-v1-
+          - run:
+              name: Install Cocoapods
+              command: bundle exec pod install
+              working_directory: <<parameters.working_directory>>
+          - save_cache:
+              key: pods-v1-{{ checksum "<<parameters.working_directory>>/Podfile.lock" }}
+              paths:
+                - <<parameters.working_directory>>/Pods
+
+      install_firebase_cli:
+        steps:
+          - run:
+              name: Install Firebase CLI
+              command: curl -sL https://firebase.tools | bash
+
+      install_dependencies:
+        parameters:
+          platform_directory:
+            type: string
+          setup_ruby_version:
+            default: false
+            type: boolean
+        steps:
+          - yarn_install
+          - when:
+              condition: <<parameters.setup_ruby_version>>
+              steps:
+                - setup_ruby_version
+          - bundle_install:
+              working_directory: <<parameters.platform_directory>>
+
+      build:
+        parameters:
+          working_directory:
+            type: string
+        steps:
+          - run:
+              name: "Building <<parameters.working_directory>> app"
+              command: bundle exec fastlane build
+              working_directory: <<parameters.working_directory>>
+
+      deploy_beta:
+        parameters:
+          working_directory:
+            type: string
+        steps:
+          - install_firebase_cli
+          - run:
+              name: "Building and deploying <<parameters.working_directory>> app"
+              command: bundle exec fastlane beta
+              working_directory: <<parameters.working_directory>>
+
+      bump_version:
+        parameters:
+          working_directory:
+            type: string
+        steps:
+          - run:
+              name: "Bump <<parameters.working_directory>> build"
+              command: bundle exec fastlane bump_build
+              working_directory: <<parameters.working_directory>>
+
+jobs:
+  checkout_code:
+    executor: app/linux_js
+    steps:
+      - checkout
+      - persist_to_workspace:
+          root: .
+          paths: .
+
+  analyse_js:
+    executor: app/linux_js
+    steps:
+      - attach_workspace:
+          at: .
+      - app/yarn_install
+      - app/code_analysis
+
+  android_build:
+    executor: app/linux_android
+    parameters:
+      working_directory:
+        default: android
+        type: string
+    steps:
+      - checkout
+      - app/install_dependencies:
+          platform_directory: <<parameters.working_directory>>
+      - app/build:
+          working_directory: <<parameters.working_directory>>
+
+  ios_build:
+    executor: app/macos
+    parameters:
+      working_directory:
+        default: ios
+        type: string
+    steps:
+      - checkout
+      - app/install_dependencies:
+          platform_directory: <<parameters.working_directory>>
+          setup_ruby_version: true
+      - app/pods_install
+      - app/build:
+          working_directory: <<parameters.working_directory>>
+
+  android_beta:
+    executor: app/linux_android
+    parameters:
+      working_directory:
+        default: android
+        type: string
+    steps:
+      - checkout
+      - app/install_dependencies:
+          platform_directory: <<parameters.working_directory>>
+      - app/deploy_beta:
+          working_directory: <<parameters.working_directory>>
+
+  ios_beta:
+    executor: app/macos
+    parameters:
+      working_directory:
+        default: ios
+        type: string
+    steps:
+      - checkout
+      - app/install_dependencies:
+          platform_directory: <<parameters.working_directory>>
+          setup_ruby_version: true
+      - app/pods_install
+      - app/deploy_beta:
+          working_directory: <<parameters.working_directory>>
+
+  bump_version:
+    executor: app/macos
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "ea:b6:74:59:bd:c6:19:41:05:d6:19:0f:05:fb:e5:e3"
+      - attach_workspace:
+          at: .
+      - app/setup_ruby_version
+      - app/bundle_install:
+          working_directory: "ios"
+      - app/bump_version:
+          working_directory: "ios"
+      - app/bundle_install:
+          working_directory: "android"
+      - app/bump_version:
+          working_directory: "android"
+
+workflows:
+  build:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              ignore: develop
+
+      - analyse_js:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              ignore: develop
+
+      - android_build:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              ignore: develop
+
+      - ios_build:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              ignore: develop
+
+  beta:
+    jobs:
+      - checkout_code:
+          filters:
+            branches:
+              only: develop
+
+      - bump_version:
+          requires:
+            - checkout_code
+          filters:
+            branches:
+              only: develop
+
+      - ios_beta:
+          filters:
+            tags:
+              only: /^beta/ios/v.*-[1-9]\d*/
+            branches:
+              ignore: /.*/
+
+      - android_beta:
+          filters:
+            tags:
+              only: /^beta/android/v.*-[1-9]\d*/
+            branches:
+              ignore: /.*/
